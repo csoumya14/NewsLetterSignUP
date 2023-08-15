@@ -4,15 +4,27 @@ import { Banner } from '../Banner/Banner';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  height: 100vh;
-  border: 1px solid green;
+  padding: 2rem;
+  background: ${props => props.theme.palette.neutral.white};
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    width: calc(100% - 10rem);
+    gap: 1rem;
+    height: fit-content;
+    border-radius: 16px;
+  }
+  @media (min-width: ${props => props.theme.mediaSize.lg}) {
+    width: calc(100% - 50rem);
+  }
+`;
+export const EmailEntered = styled.span`
+  font-weight: bold;
 `;
 
-export const ThanksMessage = styled(Banner)`
-  width: 50%;
+export const ThanksMessage = styled(Banner)``;
+export const ConfirmationMessage = styled(Banner)`
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+  }
 `;
-
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;

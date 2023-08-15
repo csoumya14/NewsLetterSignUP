@@ -1,4 +1,4 @@
-import { FormContextData, formDataTypes } from '@/types/formData';
+import { FormContextData } from '@/types/formData';
 import { ReactNode, createContext, useContext, useState } from 'react';
 
 const defaultValues = {

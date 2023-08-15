@@ -1,26 +1,24 @@
 import Head from 'next/head';
 import { Roboto } from 'next/font/google';
-import { Main, TextWrapper } from '@/styles/Home.styles';
+import { Main, TextWrapper, Heading, Wrapper } from '@/styles/Home.styles';
 import { IllustrationSmallScreen } from '@/components/images/svgs/IllustrationSmallScreen/IllustrationSmallScreen';
 import { Banner } from '@/components/Banner/Banner';
 import { List } from '@/components/List/List';
-import { useForm, SubmitHandler } from 'react-hook-form';
 import { InputEmail } from '@/components/Form/InputEmail/InputEmail';
 import { useFormData } from '../../contexts';
 import { SuccessMessage } from '@/components/SuccessMessage/SuccessMessage';
+import { useViewPort } from '@/helpers/customViewPort';
+import { IllustrationBigScreen } from '@/components/images/svgs/IllustrationBigScreen/IllustrationBigScreen';
 
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
 });
 
-type Inputs = {
-  example: string;
-  exampleRequired: string;
-};
-
 export default function Home() {
   const { successSubmission } = useFormData();
+  const [width] = useViewPort();
+  const breakPoint = 400;
   return (
     <>
       <Head>
@@ -33,21 +31,19 @@ export default function Home() {
         {successSubmission ? (
           <SuccessMessage />
         ) : (
-          <>
-            <IllustrationSmallScreen />
+          <Wrapper>
+            {width < breakPoint ? <IllustrationSmallScreen /> : <IllustrationBigScreen />}
             <TextWrapper>
-              <Banner textLevel={'h1'}>Stay Updated!</Banner>
+              <Heading textLevel={'h1'}>Stay Updated!</Heading>
               <Banner textLevel={'p'}>
                 Join 60,000+ product managers receiving monthly updates on:
               </Banner>
               <List />
               <InputEmail />
             </TextWrapper>
-          </>
+          </Wrapper>
         )}
       </Main>
     </>
   );
 }
-
-// className={`${styles.main} ${roboto.className}`

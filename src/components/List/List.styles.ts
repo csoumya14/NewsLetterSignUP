@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import itemIcon from '../../../assets/images/icon-list.svg';
 
 export const ListContainer = styled.ul`
   display: flex;

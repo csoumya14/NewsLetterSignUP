@@ -1,11 +1,6 @@
 import { FieldError } from 'react-hook-form';
 import styled from 'styled-components';
-export const Inputs = styled.input`
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid grey;
-  border-radius: 10px;
-`;
+
 export const Input = styled('input')<{ error?: FieldError }>`
   width: 100%;
   padding: 1rem;
@@ -26,16 +21,8 @@ export const Form = styled.form`
   gap: 1rem;
 `;
 
-export const Button = styled.button`
-  width: 100%;
-  padding: 1rem;
-  border-radius: 10px;
-  background: #242742;
-  color: #fff;
-`;
-
 export const ErrorMessage = styled.p`
-  color: #ff6155;
+  color: ${props => props.theme.palette.primary.sTomato};
   align-self: flex-start;
   width: 50%;
 `;

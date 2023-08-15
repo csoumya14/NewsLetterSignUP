@@ -4,8 +4,8 @@ import * as yup from 'yup';
 import { Input, Form, ErrorMessage, LabelErrorWrapper } from './InputEmail.styles';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useFormData } from '../../../../contexts';
-import { Button } from '@/components/Button/Button';
 import { formDataTypes } from '@/types/formData';
+import { Button } from '@/components/Button/Button';
 
 // ...
 

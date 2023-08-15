@@ -2,8 +2,10 @@ import styled, { css } from 'styled-components';
 import { ButtonProps } from './Button';
 const COLOR = {
   primary: css`
-    color: #fff;
-    background: red;
+    color: ${props => props.theme.palette.neutral.white};
+    background: ${props => props.theme.palette.primary.sTomato};
+    box-shadow: rgb(255, 91, 73) 3px 5px 10px;
+    border: none;
   `,
   secondary: css`
     color: #000;
@@ -13,16 +15,15 @@ const COLOR = {
 
 const DISABLED = css`
   cursor: not-allowed;
-  background: #242742;
-  color: #fff;
+  background: ${props => props.theme.palette.neutral.darkSlateGrey};
+  box-shadow: none;
+  color: ${props => props.theme.palette.neutral.white};
 `;
 
 export const Container = styled.button<ButtonProps>`
-  width: 100%;
   padding: 1rem;
   border-radius: 10px;
-
-  color: #fff;
+  color: ${props => props.theme.palette.neutral.white};
 
   ${props => props.color && COLOR[props.color]}
   ${props => props.disabled && DISABLED}
