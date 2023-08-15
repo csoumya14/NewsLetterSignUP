@@ -20,11 +20,6 @@ export const EmailEntered = styled.span`
   font-weight: bold;
 `;
 
-export const ThanksMessage = styled(Banner)``;
-export const ConfirmationMessage = styled(Banner)`
-  @media (min-width: ${props => props.theme.mediaSize.md}) {
-  }
-`;
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
