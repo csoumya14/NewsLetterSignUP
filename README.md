@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/csoumya14/NewsLetterSignUP.git)
-- Live Site URL: [Add live site URL here](https://news-letter-sign-qfk961hxe-csoumya14.vercel.app/)
+- Solution URL: [](https://github.com/csoumya14/NewsLetterSignUP.git)
+- Live Site URL: [](https://news-letter-sign-qfk961hxe-csoumya14.vercel.app/)
 
 ## My process
 
